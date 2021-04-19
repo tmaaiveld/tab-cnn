@@ -2,7 +2,9 @@
 
 ### Guitar Tablature Estimation with a Convolutional Neural Network
 
-###### This code supports the paper "Guitar Tablature Estimation with a Convolutional Neural Network" that will be presented at the 20th Conference of the International Society for Music Information Retreival (ISMIR 2019).
+###### This code supports the thesis "Automatic Tablature Estimation with Convolutional Neural Networks: Approaches and Limitations" and is a modified version of the code presented for the paper "Guitar Tablature Estimation with a Convolutional Neural Network" presented at the 20th Conference of the International Society for Music Information Retrieval (ISMIR 2019) (www.github.com/andywiggins/tab-cnn).
+
+##### Original readme documentation (Andy Wiggins & Youngmoo Kim):
 
 To visualize the system performance, `tab-cnn/demos/` contains video demonstrations showing predicted and ground truth tablature synced with input audio. To run the code, follow the instructions below.
 
@@ -52,6 +54,15 @@ Run the following line to train and test the TabCNN model:
 A summary log and a csv results file will be saved in a time-stamped folder within the `model/saved/` directory. Additionally, a folder for each fold of data will be created, containing the individual model's weights and predictions. 
 
 
+##### Additions to the readme by me:
+ 
+After downloading GuitarSet as described in Step 1, run `tab-cnn/data/DataAugmentation.py` to perform the data augmentation, optionally providing system arguments to define the range of the transposition. This will produce transposed .wav and .jams files in the GuitarSet folder. Then, run the preprocessing and use the `output_id.csv` file during training to use the augmented data set.
+
+Before training the model, verify the settings used for training in `tab-cnn/model/TabCNN.py`: 
+- choosing the correct `id.csv` file (such as when using the file produced during augmentation)
+- correctly configuring the experiment name, which determines the model variant chosen from `tab-cnn/model/ModelVariants.py
+- correctly setting the EVALUATE parameter (which defines whether to evaluate the model between folds) and the LOAD_MODEL parameter (used to load and evaluate a pre-trained model from `tab-cnn/model/saved`
+- correctly setting MODEL_PATH if using LOAD_MODEL.
 
 
 
