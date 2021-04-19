@@ -200,17 +200,14 @@ class TabCNN:
 ########### EXPERIMENT ###########
 ##################################
 
-# checklist
-# - correct experiment name
-# - correct npz file directory
-# - correct range of folds
-# - correct ID file
-# - correct DataGenerator settings (include_chords=T/F, spec_repr path? (not needed, remove default)
-# - correct batch size
+# before running, verify correct selection of the following:
+# - experiment name (determines model variant used and whether to use additional chord oracle data)
+# - fold range
+# - name of ID file
 
 EXPERIMENT = 'augmented_+3_eval'
 INCLUDE_CHORDS = 'chords' in EXPERIMENT
-DATA_PATH = '../data/spec_repr/'  # folder should be fine for all experiments
+DATA_PATH = '../data/spec_repr/' 
 FOLD_RANGE = (0, 6)
 ID_FILE = "id.csv"
 N_WORKERS = 12
