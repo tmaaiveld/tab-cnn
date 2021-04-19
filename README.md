@@ -2,7 +2,7 @@
 
 ### Guitar Tablature Estimation with a Convolutional Neural Network
 
-###### This code supports the thesis "Automatic Tablature Estimation with Convolutional Neural Networks: Approaches and Limitations" and is a modified version of the code presented for the paper "Guitar Tablature Estimation with a Convolutional Neural Network" presented at the 20th Conference of the International Society for Music Information Retrieval (ISMIR 2019) (www.github.com/andywiggins/tab-cnn).
+###### This code supports the thesis "Automatic Tablature Estimation with Convolutional Neural Networks: Approaches and Limitations" and is a modified version of the code for the paper "Guitar Tablature Estimation with a Convolutional Neural Network" presented at the 20th Conference of the International Society for Music Information Retrieval (ISMIR 2019) (www.github.com/andywiggins/tab-cnn).
 
 # Original readme documentation (Andy Wiggins & Youngmoo Kim):
 
