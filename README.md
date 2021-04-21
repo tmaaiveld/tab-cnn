@@ -10,7 +10,7 @@
  
 After downloading GuitarSet as described in Step 1, run `tab-cnn/data/DataAugmentation.py` to perform the data augmentation, optionally providing system arguments to define the range of the transposition. This will produce transposed .wav and .jams files in the GuitarSet folder. Then, run the preprocessing and use the `output_id.csv` file during training to use the augmented data set.
 
-The file `tab-cnn/data/ModelVariants.py` provides the model architecture for variations on the original tab-cnn model described in the article ([link]). These can be loaded in the training script `tab-cnn/model/model.py`.
+The file `tab-cnn/data/ModelVariants.py` provides the model architecture for variations on the original tab-cnn model described in the article. These can be loaded in the training script `tab-cnn/model/model.py`.
 
 Before training the model, verify the settings used for training in `tab-cnn/model/TabCNN.py`: 
 - choosing the correct `id.csv` file (such as when using the file produced during augmentation)
